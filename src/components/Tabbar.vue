@@ -11,7 +11,7 @@ export default {
   name: "Tabbar",
   data() {
     return {
-      displayMenu: false
+      displayMenu: false,
     };
   },
   mounted() {
@@ -26,13 +26,13 @@ export default {
       this.displayMenu = false;
     },
     clickPage(event) {
-      console.log(event.target);
-      console.log(event.target.classList);
+      // console.log(event.target);
+      // console.log(event.target.classList);
       if(event.target.classList.contains("menuImg"))
       this.displayMenu = !this.displayMenu
       else
       this.displayMenu = false;
-      console.log(this.displayMenu)
+      // console.log(this.displayMenu)
     }
   }
 };

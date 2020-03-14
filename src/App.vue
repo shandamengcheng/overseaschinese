@@ -12,11 +12,18 @@ import Tabbar from './components/Tabbar'
 // import  editor from './views/selfpage/textarea'
 export default {
   name: "App",
+  data() {
+    isLogin:false
+  },
   components:{
     Tabbar,
     // editor
   },
   menthods:{
+  },
+  mounted() {
+    if(typeof sessionStorage.getItem("isLogin") !== "undefined")
+          this.isLogin = sessionStorage.getItem("isLogin");
   }
 }
 </script>

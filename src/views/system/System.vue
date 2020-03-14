@@ -100,6 +100,7 @@ export default {
 .system {
   overflow-y: hidden;
   position: relative;
+  color:#585656;
 }
 .sysTitle {
   width: 100%;
@@ -130,6 +131,7 @@ export default {
   text-align: center;
   letter-spacing: 1vw;
   font-family: STXingkai;
+  color: #646363;
 }
 .cover {
   width: 100%;

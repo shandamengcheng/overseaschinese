@@ -23,13 +23,13 @@
           <span>关于我们</span>
         </router-link>
       </li>
-      <li>
+      <li v-if=" isLogin === true">
         <router-link to="/selfpage">
           <img src="../assets/image/self.png" />
           <span>个人中心</span>
         </router-link>
       </li>
-      <li>
+      <li v-else>
         <router-link to="/login">
           <img src="../assets/image/login.png" />
           <span>登录</span>
@@ -43,8 +43,19 @@
 export default {
   name: "Menuli",
   data() {
-    return {};
-  }
+    return {
+      isLogin:this.$root.isLogin
+    }
+  },
+  // watch:{
+  //    isLogin:function(){
+  //     // if(typeof sessionStorage.getItem("isLogin")!== "undefined")
+  //       this.isLogin = sessionStorage.getItem("isLogin");
+  //   }
+  // },
+  // mounted() {
+  //   this.isLogin = sessionStorage.getItem("isLogin");
+  // }
 };
 </script>
 
@@ -64,7 +75,7 @@ export default {
   list-style: none;
   padding: 0;
   background: #585656;
-  height: 24vw;
+  height: 25vw;
   width: 18vw;
   margin-top: 0;
   margin-bottom: 0;
@@ -72,8 +83,8 @@ export default {
 .menu li {
   box-sizing: border-box;
   width: 100%;
-  height: 4vw;
-  font-size: 1vw;
+  height: 5vw;
+  font-size: 1.3vw;
   border-bottom: 1px solid white;
   display: flex;
   color: white;
@@ -91,6 +102,7 @@ export default {
 }
 .menu li img {
   height: 50%;
+  width:30px;
   flex: 1;
   margin: auto;
 }
@@ -98,5 +110,43 @@ export default {
   flex: 4;
   margin: auto;
   padding-left: 1vw;
+}
+@media screen and (max-width: 1000px) {
+  .menu {
+  list-style: none;
+  padding: 0;
+  background: #585656;
+  height: 30vw;
+  width: 22vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  .menu li {
+  box-sizing: border-box;
+  width: 100%;
+  height: 6vw;
+  font-size: 1vw;
+  border-bottom: 1px solid white;
+  display: flex;
+  color: white;
+}
+.menu li a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+}
+.menu li img {
+  height: 50%;
+  width:10px;
+  flex: 1;
+  margin: auto;
+}
+.menu li span {
+  flex: 4;
+  margin: auto;
+  padding-left: 1vw;
+}
 }
 </style>

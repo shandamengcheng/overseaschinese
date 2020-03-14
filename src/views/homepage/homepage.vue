@@ -71,13 +71,13 @@ export default {
   /* 华文行楷 */
   font-family: STXingkai, Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 0.6vw;
-  font-size: 1.5vw;
+  margin-top:1.5vw;
+  font-size: 2.5vw;
 }
 .title {
   border-bottom: 1px solid #bcb397;
-  margin-top: 1.5vw;
-  font-size: 3vw;
+  margin-top: 3.5vw;
+  font-size: 4.3vw;
   padding-bottom: 0.6vw;
   margin-bottom: 0;
 }
@@ -90,19 +90,29 @@ export default {
   /* margin-top:10vh; */
   position: relative;
 }
-.shadowDiv {
+/* .img::before {
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:2;
+  background:#565656;
+  opacity:0.3;
+} */
+/* .shadowDiv {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  border:1px solid #585656;
   background: #585656;
-  opacity: 0.6;
+  opacity: 0.3;
   z-index: 2;
-}
-.shadowDiv:hover {
-  opacity: 0.7;
-}
+} */
+
 .img-line {
   width: 100%;
   height: 17vw;
@@ -110,5 +120,9 @@ export default {
 .img-line img {
   width: 25%;
   height: 100%;
+  position:relative;
+}
+.img img:hover {
+  opacity: 0.5;
 }
 </style>

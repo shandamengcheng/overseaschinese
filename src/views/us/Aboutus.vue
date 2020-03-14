@@ -64,6 +64,7 @@ export default {
 <style scoped>
 .usInfor {
   display: flex;
+  color:#585656;
 }
 .usInfor .vertCom {
   height: 15vw;

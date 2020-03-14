@@ -81,7 +81,7 @@ export default {
     width:90%;
     margin:auto;
     margin-top: 5vw;
-    color:black;
+    color:#585656;
 }
 .myRank p {
     width: 100%;
@@ -93,10 +93,13 @@ export default {
    margin-top:6vw;
    border-top:1px solid #bcb397;
 }
+.firstTr {
+    color:#bcb397;
+}
 table {
     width:100%;
     font-size: 1.5vw;
-    /* display:flex; */
+    color:#585656;
 }
 caption {
     /* grid-area: 1 / 1 / 2 / 4; */

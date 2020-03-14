@@ -119,8 +119,28 @@ export default {
   margin:0;
 }
 .imgContainer img {
-    widows: 100%;
+    width: 100%;
     height: 100%;
+}
+.imgMessage {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index:2;
+  background: #bcb397;
+  color: white;
+  display: none;
+}
+.imgMessage span {
+  width: 100%;
+  height: 25%;
+  font-size: 1vw;
+  display: block;
+  margin: 0 0.5vw;
+  text-align: center;
+  box-sizing:border-box;
 }
 @media screen and (max-width: 1030px) {
   .letterList {
@@ -130,20 +150,26 @@ export default {
   }
   .letterList .imgContainer {
     width: calc(100% / 2);
+    height: calc(50px + 20vw);
+    border: 1px solid black;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    margin:0;
   }
   .imgMessage {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 50%;
     background: #bcb397;
     color: white;
     display: none;
     font-size:20px;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 760px) {
     .letterList {
     display: flex;
     flex-flow: row wrap;
@@ -154,37 +180,14 @@ export default {
   }
   .imgMessage {
     position: absolute;
-    top: 60%;
+    top: 40%;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 60%;
     background: #bcb397;
     color: white;
     display: none;
     font-size:20px;
   }
-}
-
-.imgContainer img {
-  width: 100%;
-  height: 100%;
-}
-.imgMessage {
-  position: absolute;
-  top: 65%;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  background: #bcb397;
-  color: white;
-  display: none;
-}
-.imgMessage span {
-  width: 100%;
-  height: 22%;
-  font-size: 1vw;
-  display: block;
-  margin: 0 0.2vw;
-  text-align: center;
 }
 </style>

@@ -8,23 +8,44 @@
       <input type="password" id="userpassword" />
       <a href="#" class="forgetPass">忘记密码</a>
       <a href="#" class="register">注册</a>
-      <input type="button" value="登录" class="loginBtn" />
+      <input type="button" value="登录" class="loginBtn" @click="toLogin">
     </div>
   </div>
 </template>
 
 <script>
+// /homepage
 export default {
-  name: "Login"
+  name: "Login",
+  data () {
+    return {
+      loginSucc:false
+    }
+  },
+  methods:{
+    toLogin(event) {
+      sessionStorage.setItem("isLogin",true);
+      this.loginSucc = true;
+      this.$router.push({path:"/homepage",query:{
+        name:false
+      }});
+    }
+  },
+  // watch:{
+  //   loginSucc:function(){
+  //     this.loginSucc = 
+  //   }
+  // }
 };
 </script>
 
 <style scoped>
 .loginPart {
-  width: 90%;
+  width: 70%;
   height: 30vw;
   /* border: 1px solid red; */
   margin: auto;
+  margin-top:8vw;
 }
 h1 {
   width: 40%;
@@ -45,8 +66,9 @@ h1 {
   margin: auto;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 5vw;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-column-gap:-10%; */
+  margin-top: 3vw;
   font-size: 1.6vw;
 }
 .userInfor > label:first-child {
@@ -56,7 +78,7 @@ h1 {
   display: inline-block;
   margin: 1vw auto;
   color: #bcb397;
-  text-align: right;
+  text-align: center;
   line-height: 5vw;
   letter-spacing: 0.5vw;
   outline-style: none;
@@ -68,12 +90,12 @@ h1 {
   display: inline-block;
   margin: 1vw auto;
   color: #bcb397;
-  text-align: right;
+  text-align: center;
   line-height: 5vw;
   letter-spacing: 0.5vw;
 }
 #username {
-  grid-area: 1 / 2 / 2 / 6;
+  grid-area: 1 / 2 / 2 / 5;
   height: 4vw;
   width: 70%;
  outline:none;
@@ -83,7 +105,7 @@ h1 {
   border-radius: 1vw;
 }
 #userpassword {
-  grid-area: 2 / 2 / 3 / 6;
+  grid-area: 2 / 2 / 3 / 5;
   height: 4vw;
   width: 70%;
   outline:none;
@@ -94,7 +116,7 @@ h1 {
   border-radius: 1vw;
 }
 .forgetPass {
-  grid-area: 3 / 3 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 3;
   display: inline-block;
   width:80%;
  height: 5vw;
@@ -108,9 +130,9 @@ h1 {
   /* letter-spacing: 0.5vw; */
 }
 .register {
-  grid-area: 3 / 4 / 4 / 5;
-   width:80%;
- height: 5vw;
+  grid-area: 3 / 3 / 4 / 4;
+  width:80%;
+  height: 5vw;
   display: inline-block;
   margin: 1vw auto;
   color: black;
@@ -120,8 +142,8 @@ h1 {
   font-size: 1.6vw;
 }
 .loginBtn {
-  grid-area: 3 / 5 / 4 / 6;
-  width: 52%;
+  grid-area: 3 / 4 / 4 / 5;
+  width: 55%;
   /* font-size: 1vw; */
   font-size: 1em;
   height:5vw;

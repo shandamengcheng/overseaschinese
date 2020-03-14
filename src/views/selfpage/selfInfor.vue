@@ -29,12 +29,14 @@ export default {
 
 <style scoped>
 .selfinfor {
-  color: #bcb397;
+  color:#585656;
   background: white;
 }
 .uls {
   display: flex;
   justify-content: center;
+  margin-top:5vw;
+  margin-left: 4vw;
 }
 .selfinfor-list {
   padding: 0;

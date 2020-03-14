@@ -54,6 +54,7 @@ export default {
   position: relative;
   z-index: 0;
   background: #f8f8f8;
+  color:#585656;
   /* overflow: hidden; */
 }
 .selfPage::before {
@@ -145,6 +146,7 @@ export default {
   padding: 0;
   list-style: none;
   height: 40vh;
+  color:#585656;
 }
 .list-item {
   width: 100%;

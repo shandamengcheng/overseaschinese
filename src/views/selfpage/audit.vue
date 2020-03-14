@@ -111,6 +111,16 @@
 <script>
 export default {
     name: 'Audit',
+    methods: {
+    showMessage(event) {
+      if (event.target.parentNode.children[1].classList.contains("imgMessage"))
+        event.target.parentNode.children[1].style.display = "block";
+    },
+    hiddenMessage(event) {
+      if (event.target.parentNode.children[1].classList.contains("imgMessage"))
+        event.target.parentNode.children[1].style.display = "none";
+    }
+  }
 }
 </script>
 
